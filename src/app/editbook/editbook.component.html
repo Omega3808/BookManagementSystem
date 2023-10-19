@@ -1,0 +1,25 @@
+<div class="container mt-5 col-md-4 offset-md-4 shadow-lg rounded p-4">
+    <form [formGroup] = "editBookForm" (ngSubmit) = "EditBook()" class="row g-4">
+        <h3 class="text-center">Add Book</h3>
+
+        <table>
+            <tr>
+                <td>Book Id</td>
+                <td><input type="text" formControlName = "id" class="form" readonly></td>
+            </tr>
+            <tr>
+                <td>Book Name</td>
+                <td><input type="text" formControlName = "name" class="form"></td>
+            </tr>
+            <tr>
+                <td>Book Category</td>
+                <td><input type="text" formControlName = "category" class="form"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Add Book" class="btn btn-primary"></td>
+            </tr>
+        </table>
+
+    </form>
+</div>

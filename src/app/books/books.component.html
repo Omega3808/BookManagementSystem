@@ -1,0 +1,25 @@
+<div class="container mt-5">
+    <p class="bg-success p-3" *ngIf = 'delRecord'>book deleted successfuly</p>
+    <button class="btn btn-primary" routerLink="/Addbook">AddBook</button>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Name</th>
+                <th>Catagory</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let book of books">
+                <td>{{ book.id }}</td>
+                <td>{{ book.name }}</td>
+                <td>{{ book.category }}</td>
+                <td>
+                    <a class="btn btn-info m-1" [routerLink] = "['/EditBook',book.id,'edit']">Edit</a>
+                    <button class="btn btn-danger m-1" (click) = deleteRecord(book.id)>Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
